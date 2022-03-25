@@ -8,12 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 IConfigurationRoot config = new ConfigurationBuilder()
     .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+    .AddEnvironmentVariables()
     .AddJsonFile("appsettings.json")
     .Build();
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<LawyerHelperContext>(opt =>
-    opt.UseSqlServer(config.GetConnectionString("Default") ?? Environment.GetEnvironmentVariable("Default") ?? ""));
+    opt.UseSqlServer(config.GetConnectionString("Default") ?? ""));
     //.UseInMemoryDatabase("Default"));
 builder.Services.AddSwaggerGen(c =>
 {
