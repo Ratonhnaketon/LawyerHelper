@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'LawyerHelper'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_25F0554623A44E60B649B23554AF8898 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D87585D09EFB4B17B5270B102AD76F7B }}
           package: .
