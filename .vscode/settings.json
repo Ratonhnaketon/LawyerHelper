@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/490a392f-d579-4e04-bd80-89775fb0b213/resourceGroups/Ploomes/providers/Microsoft.Web/sites/LawyerHelper"
+}
