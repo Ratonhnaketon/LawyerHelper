@@ -13,7 +13,7 @@ IConfigurationRoot config = new ConfigurationBuilder()
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<LawyerHelperContext>(opt =>
-    opt.UseSqlServer(config.GetConnectionString("Default") ?? ""));
+    opt.UseSqlServer(config.GetConnectionString("Default") ?? Environment.GetEnvironmentVariable("Default") ?? ""));
     //.UseInMemoryDatabase("Default"));
 builder.Services.AddSwaggerGen(c =>
 {
